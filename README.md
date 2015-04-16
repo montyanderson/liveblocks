@@ -7,6 +7,6 @@ Please make sure both [Git](https://git-scm.herokuapp.com/downloads) and [Node.j
 
     sudo git clone https://github.com/montyanderson/realtime-art.git
     cd realtime-art
-    sudo npm install     # On Windows, remove the *sudo*.
+    sudo npm install     # On Windows, remove the '**sudo**'.
     bower install
     node app
