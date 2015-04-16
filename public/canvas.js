@@ -19,6 +19,4 @@ function draw(x, y) {
 
 	ctx.fillStyle = colors[Math.floor(Math.random() * colors.length)];
 	ctx.fillRect(x, y, 20, 20);
-
-	socket.emit("draw", {x: x, y: y});
 }

@@ -9,7 +9,7 @@ app.use(express.static("bower_components"));
 io.on("connection", function(socket) {
 
 	socket.on("draw", function(data) {
-		if(data.x.length < 5 && data.y.length < 5) {
+		if(data.x < 1000000 && data.y < 1000000) {
 			socket.broadcast.emit("draw", {
 				x: parseInt(data.x), 
 				y: parseInt(data.y)
@@ -19,4 +19,13 @@ io.on("connection", function(socket) {
 
 });
 
-server.listen(3000);
+var port;
+
+if(process.argv[2]) {
+	port = process.argv[2];
+} else {
+	port = 3000;
+}
+
+server.listen(port);
+console.log("realtime-art running on " + port);
