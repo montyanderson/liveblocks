@@ -9,8 +9,11 @@ $(document).ready(function() {
 	ctx = canvas.getContext("2d");
 
 	$(canvas).click(function(event) {
-		draw(event.pageX, event.pageY);
-		socket.emit("draw", {x: event.pageX, y: event.pageY});
+		var x = event.pageX - 10;
+		var y = event.pageY - 10;
+
+		draw(x, y);
+		socket.emit("draw", {x: x, y: y});
 	});
 });	
 
