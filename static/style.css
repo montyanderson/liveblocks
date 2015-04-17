@@ -2,3 +2,10 @@
 	margin: 0;
 	padding: 0;
 }
+
+section {
+	position: fixed;
+	z-index: 1000;
+	top: 2%;
+	right: 2%;
+}

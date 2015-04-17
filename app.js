@@ -9,6 +9,13 @@ var ect = require("ect")({
 	ext: ".ect"
 });
 
+var config = {
+	minBlockSize: 5,
+	maxBlockSize: 25
+};
+
+config.json = JSON.stringify(config);
+
 app.set("view engine", "ect");
 app.engine("ect", ect.render);
 
@@ -16,17 +23,20 @@ app.use(express.static("static"));
 app.use(express.static("bower_components"));
 
 app.get("/", function(req, res) {
-	res.render("index");
+	res.render("index", config);
 });
 
 io.on("connection", function(socket) {
 
 	socket.on("draw", function(data) {
 		if(data.x < 1000000 && data.y < 1000000) {
-			socket.broadcast.emit("draw", {
-				x: parseInt(data.x), 
-				y: parseInt(data.y)
-			});
+			if(data.size <= config.maxBlockSize && data.size >= config.minBlockSize) {
+				socket.broadcast.emit("draw", {
+					x: parseInt(data.x), 
+					y: parseInt(data.y),
+					size: parseInt(data.size)
+				});
+			}
 		}
 	});
 

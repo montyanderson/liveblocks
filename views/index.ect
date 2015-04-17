@@ -10,11 +10,16 @@
 
 		<script src="jquery/dist/jquery.min.js"></script>
 		<script src="socket.io/socket.io.js"></script>
+		<script>var config = JSON.parse('<%- @json %>');</script>
 		<script src="canvas.js"></script>
 		<script src="client.js"></script>
 
 	</head>
 	<body>
+
+		<section>
+			<input id="block-size" type="range" min="<%- @minBlockSize %>" max="<%- @maxBlockSize %>">
+		</section>
 
 		<canvas></canvas>
 

@@ -3,23 +3,27 @@ var canvas, ctx;
 $(document).ready(function() {
 
 	canvas = $("canvas")[0];
-	canvas.width = $(window).width();
-	canvas.height = $(window).height();
+	canvas.width = ($(window).width() - 20);
+	canvas.height = ($(window).height() - 20);
 
 	ctx = canvas.getContext("2d");
 
 	$(canvas).click(function(event) {
-		var x = event.pageX - 10;
-		var y = event.pageY - 10;
+		var size = $("#block-size")[0].value;
 
-		draw(x, y);
-		socket.emit("draw", {x: x, y: y});
+		var x = event.pageX - (size / 2);
+		var y = event.pageY - (size / 2);
+
+		var data = {x: x, y: y, size: size};
+
+		draw(data);
+		socket.emit("draw", data);
 	});
 });	
 
-function draw(x, y) {
+function draw(data) {
 	var colors = ["#1abc9c", "#2980b9", "#2c3e50", "#f1c40f", "#e74c3c", "#f39c12", "#9b59b6"];
 
 	ctx.fillStyle = colors[Math.floor(Math.random() * colors.length)];
-	ctx.fillRect(x, y, 20, 20);
+	ctx.fillRect(data.x, data.y, data.size, data.size);
 }
