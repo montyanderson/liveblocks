@@ -1,21 +1,21 @@
 {
-  "name": "realtime-art",
+  "name": "realtime-blocks",
   "version": "1.0.0",
-  "description": "realtime-art",
+  "description": "realtime-blocks",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/montyanderson/realtime-art.git"
+    "url": "https://github.com/montyanderson/realtime-blocks.git"
   },
   "author": "Monty Anderson <monty.linux@gmail.com>",
   "license": "GNU v2",
   "bugs": {
-    "url": "https://github.com/montyanderson/realtime-art/issues"
+    "url": "https://github.com/montyanderson/realtime-blocks/issues"
   },
-  "homepage": "https://github.com/montyanderson/realtime-art",
+  "homepage": "https://github.com/montyanderson/realtime-blocks",
   "dependencies": {
     "bower": "^1.4.1",
     "express": "^4.12.3",

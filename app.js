@@ -28,4 +28,4 @@ if(process.argv[2]) {
 }
 
 server.listen(port);
-console.log("realtime-art running on " + port);
+console.log("realtime-blocks running on " + port);
