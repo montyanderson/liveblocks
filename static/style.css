@@ -19,10 +19,30 @@ section#title {
 	left: 2%;
 }
 
+section#people {
+	top: 5%;
+	left: 40%;
+}
+
 section#options {
 	right: 10%;
 }
 
 h1 {
 	font-size: 3em;
+}
+
+button {
+	padding: 0.2em;
+	font-size: 1.2em;
+}
+
+a {
+	text-decoration: none !important;
+	color: black !important;
+	font-weight: 600;
+}
+
+a:hover {
+	color: #ccc !important;
 }

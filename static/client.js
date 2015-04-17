@@ -1,4 +1,4 @@
-var canvas, ctx;
+var canvas, ctx, ready = false;
 
 $(document).ready(function() {
 
@@ -19,6 +19,13 @@ $(document).ready(function() {
 		draw(data);
 		socket.emit("draw", data);
 	});
+
+	$("#clear").click(function() {
+		location.reload();
+	});
+
+	ready = true;
+
 });	
 
 function draw(data) {
@@ -30,9 +37,19 @@ function draw(data) {
 
 var socket = io.connect(location.origin);
 
+socket.on("users", function(users) {
+	if(ready == true) {
+		$("#users").text(users);
+	} else {
+		$(document).ready(function() {
+			$("#users").text(users);
+		});
+	}
+});
+
 socket.on("draw", function(data) {
-
-	draw(data);
-	console.log(data);
-
+	if(ready == true) {
+	 	draw(data);
+		console.log(data);
+	}
 });

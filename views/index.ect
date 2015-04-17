@@ -11,7 +11,6 @@
 		<script src="jquery/dist/jquery.min.js"></script>
 		<script src="socket.io/socket.io.js"></script>
 		<script>var config = JSON.parse('<%- @json %>');</script>
-		<script src="canvas.js"></script>
 		<script src="client.js"></script>
 
 	</head>
@@ -22,8 +21,13 @@
 			<p>A project by <a href="http://montyanderson.net">Monty Anderson</a></p>
 		</section>
 
+		<section id="people">
+			<p><span id="users">0</span> users connected.</p>
+		</section>
+
 		<section id="options">
 			<input id="block-size" type="range" min="<%- @minBlockSize %>" max="<%- @maxBlockSize %>" value="20">
+			<button id="clear">Clear</button>
 		</section>
 
 		<canvas></canvas>

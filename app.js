@@ -26,7 +26,19 @@ app.get("/", function(req, res) {
 	res.render("index", config);
 });
 
+var users = 0;
+
 io.on("connection", function(socket) {
+
+	users++;
+
+	io.emit("users", users);
+
+	socket.on("disconnect", function() {
+		users = users - 1;
+
+		socket.broadcast.emit("users", users);
+	});
 
 	socket.on("draw", function(data) {
 		if(data.x < 1000000 && data.y < 1000000) {
