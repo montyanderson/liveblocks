@@ -1,12 +1,12 @@
-# realtime-blocks
+# liveblocks
 
 Installation
 ------------
 
 Please make sure both [Git](https://git-scm.herokuapp.com/downloads) and [Node.js](https://nodejs.org/download/) are installed before running the following commands.
 
-    git clone https://github.com/montyanderson/realtime-blocks.git
-    cd realtime-blocks
+    git clone https://github.com/montyanderson/liveblocks.git
+    cd liveblocks
     sudo npm install     # On Windows, remove the 'sudo'.
     bower install
     node app

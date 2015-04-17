@@ -1,21 +1,21 @@
 {
-  "name": "realtime-blocks",
+  "name": "liveblocks",
   "version": "1.0.0",
-  "description": "realtime-blocks",
+  "description": "liveblocks",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/montyanderson/realtime-blocks.git"
+    "url": "https://github.com/montyanderson/liveblocks.git"
   },
   "author": "Monty Anderson <monty.linux@gmail.com>",
   "license": "GNU v2",
   "bugs": {
-    "url": "https://github.com/montyanderson/realtime-blocks/issues"
+    "url": "https://github.com/montyanderson/liveblocks/issues"
   },
-  "homepage": "https://github.com/montyanderson/realtime-blocks",
+  "homepage": "https://github.com/montyanderson/liveblocks",
   "dependencies": {
     "bower": "^1.4.1",
     "ect": "^0.5.9",

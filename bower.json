@@ -1,7 +1,7 @@
 {
-  "name": "realtime-blocks",
+  "name": "liveblocks",
   "version": "0.0.0",
-  "homepage": "https://github.com/montyanderson/realtime-blocks",
+  "homepage": "https://github.com/montyanderson/liveblocks",
   "authors": [
     "Monty Anderson <monty.linux@gmail.com>"
   ],

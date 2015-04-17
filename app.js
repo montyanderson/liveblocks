@@ -51,4 +51,4 @@ if(process.argv[2]) {
 }
 
 server.listen(port);
-console.log("realtime-blocks running on " + port);
+console.log("liveblocks running on " + port);
