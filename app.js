@@ -3,8 +3,21 @@ var express = require("express"),
     server = require("http").Server(app),
     io = require("socket.io")(server);
 
-app.use(express.static("public"));
+var ect = require("ect")({
+	watch: true,
+	root: __dirname + "/views",
+	ext: ".ect"
+});
+
+app.set("view engine", "ect");
+app.engine("ect", ect.render);
+
+app.use(express.static("static"));
 app.use(express.static("bower_components"));
+
+app.get("/", function(req, res) {
+	res.render("index");
+});
 
 io.on("connection", function(socket) {
 
