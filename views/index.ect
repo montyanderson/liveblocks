@@ -17,11 +17,15 @@
 	</head>
 	<body>
 
-		<section>
+		<section id="title">
+			<h1>liveblocks</h1>
+			<p>A project by <a href="http://montyanderson.net">Monty Anderson</a></p>
+		</section>
+
+		<section id="options">
 			<input id="block-size" type="range" min="<%- @minBlockSize %>" max="<%- @maxBlockSize %>" value="20">
 		</section>
 
 		<canvas></canvas>
-
 	</body>
 </html>
