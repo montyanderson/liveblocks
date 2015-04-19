@@ -17,6 +17,7 @@ Credits/Dependencies
 
 * [npm](https://www.npmjs.com/) - Package manager for Node.js modules.
 * [Express](http://expressjs.com/) - Minimalist Web framework.
+* [ect](http://ectjs.com/)
 * [Socket.io](http://socket.io/) - Multi-channel WebSockets library.
 * [Bower](http://bower.io/) - Package manager for web/front-end modules.
 * [jQuery](https://jquery.com/) - Front-end, all-purpose javascript library.
